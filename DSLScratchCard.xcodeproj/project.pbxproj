@@ -15,6 +15,7 @@
 		DDD2D7351DEC796B00DF6A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD2D7331DEC796B00DF6A36 /* LaunchScreen.storyboard */; };
 		DDD2D7401DEC796B00DF6A36 /* DSLScratchCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2D73F1DEC796B00DF6A36 /* DSLScratchCardTests.m */; };
 		DDD2D74B1DEC796B00DF6A36 /* DSLScratchCardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2D74A1DEC796B00DF6A36 /* DSLScratchCardUITests.m */; };
+		DDD2D75B1DEC7A3400DF6A36 /* DSLScratchCard.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2D75A1DEC7A3400DF6A36 /* DSLScratchCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		DDD2D7461DEC796B00DF6A36 /* DSLScratchCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLScratchCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD2D74A1DEC796B00DF6A36 /* DSLScratchCardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSLScratchCardUITests.m; sourceTree = "<group>"; };
 		DDD2D74C1DEC796B00DF6A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDD2D7591DEC7A3400DF6A36 /* DSLScratchCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLScratchCard.h; sourceTree = "<group>"; };
+		DDD2D75A1DEC7A3400DF6A36 /* DSLScratchCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLScratchCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +84,8 @@
 		DDD2D7191DEC796A00DF6A36 = {
 			isa = PBXGroup;
 			children = (
-				DDD2D7241DEC796B00DF6A36 /* DSLScratchCard */,
+				DDD2D7581DEC7A1900DF6A36 /* DSLScratchCard */,
+				DDD2D7241DEC796B00DF6A36 /* DSLScratchCardExample */,
 				DDD2D73E1DEC796B00DF6A36 /* DSLScratchCardTests */,
 				DDD2D7491DEC796B00DF6A36 /* DSLScratchCardUITests */,
 				DDD2D7231DEC796B00DF6A36 /* Products */,
@@ -98,7 +102,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DDD2D7241DEC796B00DF6A36 /* DSLScratchCard */ = {
+		DDD2D7241DEC796B00DF6A36 /* DSLScratchCardExample */ = {
 			isa = PBXGroup;
 			children = (
 				DDD2D7281DEC796B00DF6A36 /* AppDelegate.h */,
@@ -111,7 +115,7 @@
 				DDD2D7361DEC796B00DF6A36 /* Info.plist */,
 				DDD2D7251DEC796B00DF6A36 /* Supporting Files */,
 			);
-			path = DSLScratchCard;
+			path = DSLScratchCardExample;
 			sourceTree = "<group>";
 		};
 		DDD2D7251DEC796B00DF6A36 /* Supporting Files */ = {
@@ -138,6 +142,15 @@
 				DDD2D74C1DEC796B00DF6A36 /* Info.plist */,
 			);
 			path = DSLScratchCardUITests;
+			sourceTree = "<group>";
+		};
+		DDD2D7581DEC7A1900DF6A36 /* DSLScratchCard */ = {
+			isa = PBXGroup;
+			children = (
+				DDD2D7591DEC7A3400DF6A36 /* DSLScratchCard.h */,
+				DDD2D75A1DEC7A3400DF6A36 /* DSLScratchCard.m */,
+			);
+			path = DSLScratchCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD2D75B1DEC7A3400DF6A36 /* DSLScratchCard.m in Sources */,
 				DDD2D72D1DEC796B00DF6A36 /* ViewController.m in Sources */,
 				DDD2D72A1DEC796B00DF6A36 /* AppDelegate.m in Sources */,
 				DDD2D7271DEC796B00DF6A36 /* main.m in Sources */,
@@ -428,7 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QTRV8G9WAU;
-				INFOPLIST_FILE = DSLScratchCard/Info.plist;
+				INFOPLIST_FILE = DSLScratchCardExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dsl.DSLScratchCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,7 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QTRV8G9WAU;
-				INFOPLIST_FILE = DSLScratchCard/Info.plist;
+				INFOPLIST_FILE = DSLScratchCardExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dsl.DSLScratchCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
