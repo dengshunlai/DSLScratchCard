@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6F3A7DF1DED70C80005F1B4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D6F3A7DE1DED70C80005F1B4 /* README.md */; };
+		D6F3A7E11DED732F0005F1B4 /* snapshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F3A7E01DED732F0005F1B4 /* snapshot.png */; };
 		DDD2D7271DEC796B00DF6A36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2D7261DEC796B00DF6A36 /* main.m */; };
 		DDD2D72A1DEC796B00DF6A36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2D7291DEC796B00DF6A36 /* AppDelegate.m */; };
 		DDD2D72D1DEC796B00DF6A36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2D72C1DEC796B00DF6A36 /* ViewController.m */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6F3A7DE1DED70C80005F1B4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D6F3A7E01DED732F0005F1B4 /* snapshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snapshot.png; sourceTree = "<group>"; };
 		DDD2D7221DEC796B00DF6A36 /* DSLScratchCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSLScratchCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD2D7261DEC796B00DF6A36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DDD2D7281DEC796B00DF6A36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		DDD2D7191DEC796A00DF6A36 = {
 			isa = PBXGroup;
 			children = (
+				D6F3A7DE1DED70C80005F1B4 /* README.md */,
+				D6F3A7E01DED732F0005F1B4 /* snapshot.png */,
 				DDD2D7581DEC7A1900DF6A36 /* DSLScratchCard */,
 				DDD2D7241DEC796B00DF6A36 /* DSLScratchCardExample */,
 				DDD2D73E1DEC796B00DF6A36 /* DSLScratchCardTests */,
@@ -265,6 +271,7 @@
 				DDD2D7351DEC796B00DF6A36 /* LaunchScreen.storyboard in Resources */,
 				DDD2D7321DEC796B00DF6A36 /* Assets.xcassets in Resources */,
 				DDD2D7301DEC796B00DF6A36 /* Main.storyboard in Resources */,
+				D6F3A7E11DED732F0005F1B4 /* snapshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +298,7 @@
 			files = (
 				DDD2D75B1DEC7A3400DF6A36 /* DSLScratchCard.m in Sources */,
 				DDD2D72D1DEC796B00DF6A36 /* ViewController.m in Sources */,
+				D6F3A7DF1DED70C80005F1B4 /* README.md in Sources */,
 				DDD2D72A1DEC796B00DF6A36 /* AppDelegate.m in Sources */,
 				DDD2D7271DEC796B00DF6A36 /* main.m in Sources */,
 			);
