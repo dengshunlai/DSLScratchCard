@@ -123,7 +123,7 @@
     if (pow(current.x - pre.x, 2) + pow(current.y - pre.y, 2) < pow(2, 2)) {
         return;
     }
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(self.bounds.size.width, self.bounds.size.height), NO, [UIScreen mainScreen].scale);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(_coverImageView.bounds.size.width, _coverImageView.bounds.size.height), NO, [UIScreen mainScreen].scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [_coverImageView.image drawInRect:_coverImageView.bounds];
     CGContextSetLineCap(context, kCGLineCapRound);
