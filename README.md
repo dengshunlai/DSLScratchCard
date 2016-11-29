@@ -13,5 +13,5 @@ card.frame = CGRectMake(...);
 ```
 
 ##效果图：
-![](https://github.com/dengshunlai/DSLScatchCard/raw/master/snapshot.png)
+![](https://github.com/dengshunlai/DSLScratchCard/raw/master/snapshot.png)
 
