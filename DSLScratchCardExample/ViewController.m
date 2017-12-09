@@ -24,9 +24,10 @@
     UIBarButtonItem *reset = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reset:)];
     self.navigationItem.rightBarButtonItem = reset;
     
-    _card1 = [DSLScratchCard scratchCardWithHiddenImage:[UIImage imageNamed:@"RMB.jpg"]
-                                             coverColor:[UIColor lightGrayColor]
-                                             coverImage:nil];
+    _card1 = [DSLScratchCard scratchCardWithHiddenView:nil
+                                           hiddenImage:[UIImage imageNamed:@"RMB.jpg"]
+                                            coverColor:[UIColor lightGrayColor]
+                                            coverImage:nil];
     _card1.frame = CGRectMake(30, 100, [UIScreen mainScreen].bounds.size.width - 60, ([UIScreen mainScreen].bounds.size.width - 60) * 165 / 315);
 //    _card1.coverImage = [UIImage imageNamed:@"coverImage.jpg"];
     [self.view addSubview:_card1];

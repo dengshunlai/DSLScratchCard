@@ -37,7 +37,7 @@
 
 - (void)initialization
 {
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor clearColor];
     _hiddenImageView = [[UIImageView alloc] init];
     _hiddenImageView.contentMode = UIViewContentModeScaleAspectFill;
     _hiddenImageView.clipsToBounds = YES;
@@ -51,13 +51,17 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_coverImageView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_coverImageView)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_coverImageView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_coverImageView)]];
     
-    _lineWidth = 15;
+    _lineWidth = 25;
     self.coverColor = [UIColor lightGrayColor];
 }
 
-+ (instancetype)scratchCardWithHiddenImage:(UIImage *)hiddenImage coverColor:(UIColor *)coverColor coverImage:(UIImage *)coverImage
++ (instancetype)scratchCardWithHiddenView:(UIView *)hiddenView
+                              hiddenImage:(UIImage *)hiddenImage
+                               coverColor:(UIColor *)coverColor
+                               coverImage:(UIImage *)coverImage
 {
     DSLScratchCard *card = [[DSLScratchCard alloc] init];
+    card.hiddenView = hiddenView;
     card.hiddenImage = hiddenImage;
     card.coverColor = coverColor;
     card.coverImage = coverImage;
@@ -66,27 +70,31 @@
 
 #pragma mark - Set method
 
+- (void)setHiddenView:(UIView *)hiddenView
+{
+    if (_hiddenView != hiddenView) {
+        [_hiddenView removeFromSuperview];
+        _hiddenView = hiddenView;
+        [self setup];
+    }
+}
+
 - (void)setHiddenImage:(UIImage *)hiddenImage
 {
     _hiddenImage = hiddenImage;
-    _hiddenImageView.image = _hiddenImage;
+    [self setup];
 }
 
 - (void)setCoverColor:(UIColor *)coverColor
 {
     _coverColor = coverColor;
-    if (_coverImage) {
-        return;
-    }
-    _coverImageView.image = [self imageWithColor:_coverColor];
+    [self setup];
 }
 
 - (void)setCoverImage:(UIImage *)coverImage
 {
     _coverImage = coverImage;
-    if (_coverImage) {
-        _coverImageView.image = _coverImage;
-    }
+    [self setup];
 }
 
 #pragma mark - API
@@ -101,6 +109,24 @@
 }
 
 #pragma mark - Other
+
+- (void)setup {
+    if (_hiddenView) {
+        if (![self.subviews containsObject:_hiddenView]) {
+            [self insertSubview:_hiddenView belowSubview:_coverImageView];
+            _hiddenView.translatesAutoresizingMaskIntoConstraints = NO;
+            [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_hiddenView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_hiddenView)]];
+            [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_hiddenView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_hiddenView)]];
+        }
+    } else {
+        _hiddenImageView.image = _hiddenImage;
+    }
+    if (_coverImage) {
+        _coverImageView.image = _coverImage;
+    } else {
+        _coverImageView.image = [self imageWithColor:_coverColor];
+    }
+}
 
 - (UIImage *)imageWithColor:(UIColor *)color
 {
@@ -137,3 +163,4 @@
 }
 
 @end
+
