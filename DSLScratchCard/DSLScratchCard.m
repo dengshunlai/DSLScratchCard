@@ -17,9 +17,9 @@
 
 @implementation DSLScratchCard
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
         [self initialization];
     }
